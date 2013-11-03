@@ -5,6 +5,8 @@ Library/*
 *.csproj
 *.sln
 *.userprefs
+*.unityproj
 Temp
 *.pidb
 Build
+Assets/Scenes/Testing
