@@ -1,1 +1,0 @@
-Anything and everything added to this folder will be added to the ignore list and not be commited to the master directory. Feel free to use this folder for local use of testing and building new features.
