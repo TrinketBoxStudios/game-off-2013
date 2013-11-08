@@ -10,6 +10,8 @@ public class ConstantMovement : MonoBehaviour
 	
 	private Rigidbody _rigidbody;
 	
+	private bool _grounded = true;
+	
 	// Use this for initialization
 	void Start () 
 	{
@@ -21,13 +23,25 @@ public class ConstantMovement : MonoBehaviour
 	{
 		_playerVelocity = _rigidbody.velocity;
 		
-		if(Input.GetKeyDown(KeyCode.Space) )
+		if(Input.GetKeyDown(KeyCode.Space) && _grounded )
 		{
-			_playerVelocity.y += jumpHeight;	
+			_playerVelocity.y += jumpHeight;
+			_grounded = false;
 		}
 		
 		_playerVelocity.x = movementSpeed;
 		
 		_rigidbody.velocity = _playerVelocity;
+	}
+	
+	void OnCollisionEnter( Collision collision )
+	{
+		//foreach( ContactPoint contact in collision.contacts)
+		//{
+			//if(contact.normal == Vector3.up || contact.normal == Vector3.down)
+			//{
+				_grounded = true;
+			//}
+		//}
 	}
 }
