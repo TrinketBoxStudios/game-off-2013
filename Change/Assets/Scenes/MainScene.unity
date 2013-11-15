@@ -4,13 +4,12 @@
 SceneSettings:
   m_ObjectHideFlags: 0
   m_PVSData: 
-  m_QueryMode: 1
   m_PVSObjectsArray: []
   m_PVSPortalsArray: []
   m_OcclusionBakeSettings:
-    viewCellSize: 1
-    bakeMode: 2
-    memoryUsage: 10485760
+    smallestOccluder: 5
+    smallestHole: .25
+    backfaceThreshold: 100
 --- !u!104 &2
 RenderSettings:
   m_Fog: 0
@@ -23,6 +22,7 @@ RenderSettings:
   m_SkyboxMaterial: {fileID: 0}
   m_HaloStrength: .5
   m_FlareStrength: 1
+  m_FlareFadeSpeed: 3
   m_HaloTexture: {fileID: 0}
   m_SpotCookie: {fileID: 0}
   m_ObjectHideFlags: 0
@@ -344,6 +344,9 @@ Renderer:
   m_UseLightProbes: 0
   m_LightProbeAnchor: {fileID: 0}
   m_ScaleInLightmap: 1
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_SortingLayerID: 0
 --- !u!65 &114401771
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -447,15 +450,15 @@ Transform:
   - {fileID: 492269686}
   - {fileID: 67555608}
   - {fileID: 2047979799}
-  - {fileID: 224017545}
   - {fileID: 1776808539}
-  - {fileID: 460378246}
+  - {fileID: 224017545}
+  - {fileID: 698814909}
+  - {fileID: 496890256}
   - {fileID: 842020960}
   - {fileID: 1005582944}
-  - {fileID: 1296994322}
   - {fileID: 1209076554}
-  - {fileID: 496890256}
-  - {fileID: 698814909}
+  - {fileID: 1296994322}
+  - {fileID: 460378246}
   - {fileID: 891652939}
   m_Father: {fileID: 0}
 --- !u!1001 &199069831
@@ -529,12 +532,15 @@ Renderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 2100000, guid: 662ebca3d1898db4cb239757edbb0509, type: 2}
+  - {fileID: 10302, guid: 0000000000000000f000000000000000, type: 0}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
   m_LightProbeAnchor: {fileID: 0}
   m_ScaleInLightmap: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_SortingLayerID: 0
 --- !u!65 &224017543
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -667,11 +673,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 400000, guid: d18723999261ca142b23c3709a649a06, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -5.88240814
+      value: -4.41343117
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: d18723999261ca142b23c3709a649a06, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 2.43237495
+      value: 3.46065903
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: d18723999261ca142b23c3709a649a06, type: 2}
       propertyPath: m_LocalPosition.z
@@ -701,6 +707,14 @@ Prefab:
       propertyPath: movementSpeed
       value: 5
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: d18723999261ca142b23c3709a649a06, type: 2}
+      propertyPath: m_TagString
+      value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 2300000, guid: d18723999261ca142b23c3709a649a06, type: 2}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 10302, guid: 0000000000000000f000000000000000, type: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d18723999261ca142b23c3709a649a06, type: 2}
   m_RootGameObject: {fileID: 1683030906}
@@ -788,12 +802,15 @@ Renderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 2100000, guid: 662ebca3d1898db4cb239757edbb0509, type: 2}
+  - {fileID: 10302, guid: 0000000000000000f000000000000000, type: 0}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
   m_LightProbeAnchor: {fileID: 0}
   m_ScaleInLightmap: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_SortingLayerID: 0
 --- !u!65 &460378248
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -988,12 +1005,15 @@ Renderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 2100000, guid: 662ebca3d1898db4cb239757edbb0509, type: 2}
+  - {fileID: 10302, guid: 0000000000000000f000000000000000, type: 0}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
   m_LightProbeAnchor: {fileID: 0}
   m_ScaleInLightmap: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_SortingLayerID: 0
 --- !u!65 &496890258
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1027,7 +1047,7 @@ GameObject:
   - 92: {fileID: 566476568}
   - 124: {fileID: 566476567}
   - 81: {fileID: 566476566}
-  - 114: {fileID: 566476571}
+  - 114: {fileID: 566476572}
   m_Layer: 0
   m_Name: 2DCamera
   m_TagString: MainCamera
@@ -1088,6 +1108,7 @@ Camera:
   m_RenderingPath: 2
   m_TargetTexture: {fileID: 0}
   m_HDR: 1
+  m_OcclusionCulling: 1
 --- !u!4 &566476570
 Transform:
   m_ObjectHideFlags: 0
@@ -1100,7 +1121,7 @@ Transform:
   m_Children:
   - {fileID: 1561012729}
   m_Father: {fileID: 0}
---- !u!114 &566476571
+--- !u!114 &566476572
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
@@ -1108,7 +1129,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 566476565}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: df9e9624e6161be4f9840bfdf258d95b, type: 3}
+  m_Script: {fileID: 11500000, guid: ca46e7716dc74f04ca392aa4639c2695, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   followTarget: {fileID: 1683030906}
@@ -1143,12 +1164,15 @@ Renderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 2100000, guid: 662ebca3d1898db4cb239757edbb0509, type: 2}
+  - {fileID: 10302, guid: 0000000000000000f000000000000000, type: 0}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
   m_LightProbeAnchor: {fileID: 0}
   m_ScaleInLightmap: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_SortingLayerID: 0
 --- !u!65 &698814907
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1279,6 +1303,9 @@ Renderer:
   m_UseLightProbes: 0
   m_LightProbeAnchor: {fileID: 0}
   m_ScaleInLightmap: 1
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_SortingLayerID: 0
 --- !u!64 &774785961
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -1352,12 +1379,15 @@ Renderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 2100000, guid: 662ebca3d1898db4cb239757edbb0509, type: 2}
+  - {fileID: 10302, guid: 0000000000000000f000000000000000, type: 0}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
   m_LightProbeAnchor: {fileID: 0}
   m_ScaleInLightmap: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_SortingLayerID: 0
 --- !u!65 &842020962
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1454,12 +1484,15 @@ Renderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 2100000, guid: 662ebca3d1898db4cb239757edbb0509, type: 2}
+  - {fileID: 10302, guid: 0000000000000000f000000000000000, type: 0}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
   m_LightProbeAnchor: {fileID: 0}
   m_ScaleInLightmap: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_SortingLayerID: 0
 --- !u!65 &891652937
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1622,12 +1655,15 @@ Renderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 2100000, guid: 662ebca3d1898db4cb239757edbb0509, type: 2}
+  - {fileID: 10302, guid: 0000000000000000f000000000000000, type: 0}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
   m_LightProbeAnchor: {fileID: 0}
   m_ScaleInLightmap: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_SortingLayerID: 0
 --- !u!65 &1005582946
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1860,6 +1896,9 @@ Renderer:
   m_UseLightProbes: 0
   m_LightProbeAnchor: {fileID: 0}
   m_ScaleInLightmap: 1
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_SortingLayerID: 0
 --- !u!65 &1167494342
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1932,12 +1971,15 @@ Renderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 2100000, guid: 662ebca3d1898db4cb239757edbb0509, type: 2}
+  - {fileID: 10302, guid: 0000000000000000f000000000000000, type: 0}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
   m_LightProbeAnchor: {fileID: 0}
   m_ScaleInLightmap: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_SortingLayerID: 0
 --- !u!65 &1209076556
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2001,12 +2043,15 @@ Renderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 2100000, guid: 662ebca3d1898db4cb239757edbb0509, type: 2}
+  - {fileID: 10302, guid: 0000000000000000f000000000000000, type: 0}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
   m_LightProbeAnchor: {fileID: 0}
   m_ScaleInLightmap: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_SortingLayerID: 0
 --- !u!65 &1296994324
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2414,6 +2459,9 @@ Renderer:
   m_UseLightProbes: 0
   m_LightProbeAnchor: {fileID: 0}
   m_ScaleInLightmap: 1
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_SortingLayerID: 0
 --- !u!64 &1561012727
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -2501,7 +2549,7 @@ GameObject:
   - 108: {fileID: 1683030913}
   m_Layer: 0
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2519,12 +2567,15 @@ Renderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 2100000, guid: 8849975ddae726346be634b6a63e97c8, type: 2}
+  - {fileID: 10302, guid: 0000000000000000f000000000000000, type: 0}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
   m_LightProbeAnchor: {fileID: 0}
   m_ScaleInLightmap: 1
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_SortingLayerID: 0
 --- !u!65 &1683030908
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2553,7 +2604,7 @@ Transform:
   m_PrefabInternal: {fileID: 251449307}
   m_GameObject: {fileID: 1683030906}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -5.88240814, y: 2.43237495, z: 0}
+  m_LocalPosition: {x: -4.41343117, y: 3.46065903, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1789734115}
@@ -2655,12 +2706,15 @@ Renderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 2100000, guid: 662ebca3d1898db4cb239757edbb0509, type: 2}
+  - {fileID: 10302, guid: 0000000000000000f000000000000000, type: 0}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
   m_LightProbeAnchor: {fileID: 0}
   m_ScaleInLightmap: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_SortingLayerID: 0
 --- !u!65 &1776808537
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2990,6 +3044,9 @@ Renderer:
   m_UseLightProbes: 0
   m_LightProbeAnchor: {fileID: 0}
   m_ScaleInLightmap: 1
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_SortingLayerID: 0
 --- !u!65 &2047979797
 BoxCollider:
   m_ObjectHideFlags: 0
