@@ -15,6 +15,8 @@ public class ConstantMovingCharacterController : MonoBehaviour
 
 	public Transform groundCheck;
 
+	public Vector3 nextScale;
+
 	// Use this for initialization
 	void Start () 
 	{
@@ -66,6 +68,14 @@ public class ConstantMovingCharacterController : MonoBehaviour
 		if(other.tag == "ReverseObject")
 		{
 			direction *= -1;
+	
+			// ... add a force to the player.
+			rigidbody2D.velocity = new Vector2(-rigidbody2D.velocity.x, rigidbody2D.velocity.y);
+
+			iTween.ScaleTo(gameObject, iTween.Hash("scale", nextScale, "easetype", iTween.EaseType.easeInCubic));
+
+			maxSpeed += 10.0f;
+			jumpForce += 100.0f;
 		}
 	}
 }

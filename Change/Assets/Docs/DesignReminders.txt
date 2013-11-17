@@ -1,0 +1,5 @@
+-Scale Camera back as player 'ages' along with
+	-increasing size
+	-increasing/decreasing speed
+	-changing color
+	-
